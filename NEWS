@@ -2,6 +2,9 @@
   dfoptim                                                               NEWS
 ------------------------------------------------------------------------------
 
+Changes in version 2016.7-1 (2011-07-08)
+
+    o Used a slightly modified code for hjk() and hjkb()
 
 Changes in version 2011.8-1 (2011-08-12)
 

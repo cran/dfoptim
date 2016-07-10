@@ -91,7 +91,8 @@ xm1b <- nmkb(fn=rosbkext, par=p0, lower=-2, upper=2)
 
 ### A non-smooth problem
 hald <- function(x) {
-#Hald J & Madsen K (1981), Combined LP and quasi-Newton methods for minimax optimization, Mathematical Programming, 20, p.42-62.
+#Hald J & Madsen K (1981), Combined LP and quasi-Newton methods 
+#for minimax optimization, Mathematical Programming, 20, p.42-62.
 	i <- 1:21
 	t <- -1 + (i - 1)/10
 	f <- (x[1] + x[2] * t) / ( 1 + x[3]*t + x[4]*t^2 + x[5]*t^3) - exp(t)
