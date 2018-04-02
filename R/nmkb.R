@@ -83,7 +83,7 @@ if (all(c2)) stop("Use `nmk()' for unconstrained optimization!", call.=FALSE)
     chi <- 2
     sigma <- 0.5
     conv <- 1
-    oshrink <- 0
+    oshrink <- 1
     restarts <- 0
     orth <- 0
     dist <- f[n + 1] - f[1]
@@ -195,7 +195,7 @@ if (all(c2)) stop("Use `nmk()' for unconstrained optimization!", call.=FALSE)
         simplex.size <- sum(abs(v))/max(1, sum(abs(V[, 1])))
         f[is.nan(f)] <- Inf
         dist <- f[n + 1] - f[1]
-        sgrad <- c(crossprod(t(v), delf))
+        sgrad <- c(solve(t(v), delf))
         if (trace & !(itc%%2)) 
             cat("iter: ", itc, "\n", "value: ", f[1], "\n")
     }

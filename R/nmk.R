@@ -47,7 +47,7 @@ function(par, fn, control=list(), ...) {
 	chi <- 2
 	sigma <- 0.5
 	conv <- 1
-	oshrink <- 0
+	oshrink <- 1
 	restarts <- 0
 	orth <- 0
 	dist <- f[n+1] - f[1]
@@ -154,7 +154,7 @@ function(par, fn, control=list(), ...) {
 		f[is.nan(f)] <- Inf
 
 		dist <- f[n+1] - f[1]
-		sgrad <- c(crossprod(t(v), delf))
+		sgrad <- c(solve(t(v), delf))
 		if (trace & !(itc %% 2)) cat("iter: ", itc, "\n", "value: ", f[1], "\n")
 	}
 
