@@ -73,7 +73,7 @@ It is implemented here with the permission of Prof. Kelley and SIAM.  However, t
 
 
 \seealso{
-\code{\link{optim}}, \code{\link{hjk}}
+\code{\link{optim}}, \code{\link{hjk}}, \code{\link{mads}}
 }
 \examples{
  rosbkext <- function(x){

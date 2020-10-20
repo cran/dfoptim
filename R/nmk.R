@@ -55,7 +55,8 @@ function(par, fn, control=list(), ...) {
 	v <- V[, -1] - V[, 1]
 	delf <- f[-1] - f[1]
 	diam <- sqrt(colSums(v^2))
-	sgrad <- c(solve(t(v), delf))
+#	sgrad <- c(solve(t(v), delf))
+	sgrad <- c(crossprod(t(v), delf))
 	alpha <- 1.e-04 * max(diam) / sqrt(sum(sgrad^2))
 	simplex.size <- sum(abs(V[, -1] - V[, 1])) / max(1, sum(abs(V[, 1])))
 
@@ -154,7 +155,8 @@ function(par, fn, control=list(), ...) {
 		f[is.nan(f)] <- Inf
 
 		dist <- f[n+1] - f[1]
-		sgrad <- c(solve(t(v), delf))
+#		sgrad <- c(solve(t(v), delf))
+		sgrad <- c(crossprod(t(v), delf))
 		if (trace & !(itc %% 2)) cat("iter: ", itc, "\n", "value: ", f[1], "\n")
 	}
 
