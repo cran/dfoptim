@@ -1,5 +1,5 @@
 \name{dfoptim}
-\alias{dfoptim}
+\alias{dfoptim-package}
 \docType{package}
 \title{
 Derivative-Free Optimization
@@ -12,8 +12,8 @@ More importantly, they can be used to solve non-smooth optimization problems. Th
 \tabular{ll}{
 Package: \tab dfoptim\cr
 Type: \tab Package\cr
-Version: \tab 2016.7-1\cr
-Date: \tab 2016-07-08\cr
+Version: \tab 2023.1.0\cr
+Date: \tab 2023-08-21\cr
 License: \tab GPL-2 or greater\cr
 LazyLoad: \tab yes\cr
 }
